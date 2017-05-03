@@ -8,7 +8,7 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 	&& ln -sf /dev/stderr /var/log/nginx/error.log
 
 RUN apt-get install  -y  supervisor
-ADD ./conf/supervisord.conf /etc/supervisor/supervisord.conf
+ADD ./supervisord.conf /etc/supervisor/supervisord.conf
 ADD ./start.sh /start.sh
 
 STOPSIGNAL SIGQUIT
